@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import {Montserrat} from'@next/font/google';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa6";
@@ -115,10 +116,10 @@ export default function ContactUs() {
   <div className="text-center">
     <Image src={arrow} alt="Arrow" width={50} height={50} className="mx-auto mb-2" />
     <h5 className="font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">
-      WE CAN'T WAIT TO MEET YOU
+      WE CAN&#39T WAIT TO MEET YOU
     </h5>
     <h2 className="font-bold text-[50px] leading-[60px] tracking-[0.2px] text-[#252B42] font-montserrat py-5">
-      Let's Talk
+      Let&#39s Talk
     </h2>
   </div>
   {/* CTA Button */}
