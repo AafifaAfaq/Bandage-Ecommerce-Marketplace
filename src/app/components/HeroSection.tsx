@@ -11,11 +11,11 @@ const montserrat = Montserrat({
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-screen flex items-center justify-center bg-[#FAFAFA]">
+    <div className="relative w-full h-auto  flex items-center justify-center bg-[#FAFAFA]">
       {/* Left Content */}
       <div className="absolute center px-10 top-1/2 transform -translate-y-1/2 text-white space-y-4 max-w-md">
         <p className="uppercase text-sm tracking-wide">Summer 2020</p>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        <h1 className="text-2xl md:text-4xl sm:text-sm lg:6xl font-bold leading-tight">
           New Collection
         </h1>
         <p className="text-sm md:text-lg font-light">

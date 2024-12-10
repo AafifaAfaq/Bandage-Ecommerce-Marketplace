@@ -26,8 +26,8 @@ const EditorSection = () => {
       </div>
 
      {/* Wrapper for Full Centering */}
-<div className=" relative flex justify-around items-center w-full h-screen bg-[#FAFAFA]">
-  <div className="w-6/12 flex justify-center gap-4 ">
+<div className=" relative flex justify-around items-center w-full h-50% lg:h-auto bg-[#FAFAFA]">
+  <div className="w-12/12  lg:6/12  md:flex justify-center gap-4 ">
     {/* Men */}
     <div className="relative group">
       <Image
@@ -35,7 +35,7 @@ const EditorSection = () => {
         alt="Men"
         width={510}
         height={500}
-        className="w-full h-full object-cover rounded-md"
+        className="w-12/12 h-full  object-cover rounded-md"
       />
       <div className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-semibold rounded-md shadow-md opacity-90 group-hover:opacity-100">
         MEN
@@ -47,6 +47,7 @@ const EditorSection = () => {
       <Image
         src={womenImg}
         alt="Women"
+        width={510}
         className="w-full h-full object-cover rounded-md"
       />
       <div className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-semibold rounded-md shadow-md opacity-90 group-hover:opacity-100">
@@ -55,13 +56,15 @@ const EditorSection = () => {
     </div>
 
     {/* Accessories & Kids */}
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-3">
       {/* Accessories */}
       <div className="relative group">
         <Image
           src={accessoriesImg}
           alt="Accessories"
+          width={400}
           className="w-full h-full object-cover rounded-md"
+
         />
         <div className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-semibold rounded-md shadow-md opacity-90 group-hover:opacity-100">
           ACCESSORIES
