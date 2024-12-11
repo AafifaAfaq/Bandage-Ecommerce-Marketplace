@@ -69,6 +69,32 @@ export default function NavBar2() {
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-[#252B42] text-white p-4 flex flex-col items-center gap-4 z-50">
+            <Link href="/" className="hover:underline">
+              Home
+            </Link>
+            <Link href="/" className="hover:underline">
+              Product
+            </Link>
+            <Link href="/" className="hover:underline">
+              Pricing
+            </Link>
+            <Link href="/contact" className="hover:underline">
+              Contact
+            </Link>
+
+            {/* Close Button */}
+            <button
+              onClick={toggleMenu}
+              className="mt-4 px-6 py-2 bg-red-500 rounded text-white"
+            >
+              Close Menu
+            </button>
+          </div>
+        )}
     </div>
   );
 }
