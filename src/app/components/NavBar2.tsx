@@ -70,31 +70,40 @@ export default function NavBar2() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-[#252B42] text-white p-4 flex flex-col items-center gap-4 z-50">
-            <Link href="/" className="hover:underline">
-              Home
-            </Link>
-            <Link href="/" className="hover:underline">
-              Product
-            </Link>
-            <Link href="/" className="hover:underline">
-              Pricing
-            </Link>
-            <Link href="/contact" className="hover:underline">
-              Contact
-            </Link>
+     {/* Mobile Menu */}
+     <div className="lg:hidden w-full flex items-center justify-between p-4">
+        {/* Logo */}
+        <h3 className="font-Montserrat font-semibold leading-[32px] text-[24px]">Bandage</h3>
 
-            {/* Close Button */}
-            <button
-              onClick={toggleMenu}
-              className="mt-4 px-6 py-2 bg-red-500 rounded text-white"
-            >
-              Close Menu
-            </button>
-          </div>
-        )}
+        {/* Hamburger Icon */}
+        <div className="cursor-pointer" onClick={toggleMenu}>
+          <div className="w-[24px] h-[2px] bg-black mb-[5px]"></div>
+          <div className="w-[24px] h-[2px] bg-black mb-[5px]"></div>
+          <div className="w-[24px] h-[2px] bg-black"></div>
+        </div>
+      </div>
+
+      {/* Mobile Menu Content */}
+      <div
+        className={`${
+          isMenuOpen ? "block" : "hidden"
+        } absolute top-0 left-0 w-full bg-[#252B42] p-4 flex flex-col items-center gap-4 z-50`}
+      >
+        <ul className="font-Montserrat font-semibold text-[14px] text-white leading-[24px] gap-4 flex flex-col items-center">
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/">Product</Link></li>
+          <li><Link href="/">Pricing</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+        </ul>
+
+        {/* Close button */}
+        <button
+          onClick={toggleMenu}
+          className="text-white font-Montserrat text-[14px]"
+        >
+          Close Menu
+        </button>
+      </div>
     </div>
   );
 }
