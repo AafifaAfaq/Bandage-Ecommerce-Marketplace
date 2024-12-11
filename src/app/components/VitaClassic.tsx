@@ -20,26 +20,33 @@ const VitaClassic = () => {
         <p className="text-sm sm:text-base md:text-lg font-light">
           We know how large objects will act, We know how our objects will act, We know
         </p>
-        {/* Price and Add to Cart */}
-        <div className="flex items-center gap-4">
-          <p className="text-2xl sm:text-3xl font-bold">$16.48</p>
-          <button className="bg-[#3AB666] text-white  py-2 px-6 rounded-md font-semibold hover:bg-green-600">
-            Add to Cart
-          </button>
-        </div>
-      </div>
+      {/* Price and Add to Cart */}
+<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
+  {/* Price Section */}
+  <p className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
+    $16.48
+  </p>
 
-      {/* Right Image */}
-      <div className="absolute bottom-0 right-12 w-[60%] flex justify-center sm:w-[40%] md:w-[40%] lg:w-[60%]">
-        <Image
-          src={vita} // Ensure the file path is correct
-          alt="Vita Classic Product"
-          width={500}
-          height={500}
-          className="object-cover"
-          priority
-        />
+  {/* Add to Cart Button */}
+  <button className="bg-[#3AB666] text-white py-2 px-4 sm:px-6 rounded-md font-semibold hover:bg-green-600 transition-all">
+    Add to Cart
+  </button>
+</div>
+
       </div>
+      {/* Right Image */}
+<div className="absolute bottom-0 right-6 w-[60%] sm:right-2 sm:w-[40%] md:w-[40%] lg:w-[60%] flex justify-center">
+  <Image
+    src={vita} // Ensure the file path is correct
+    alt="Vita Classic Product"
+    width={500}
+    height={500}
+    className="object-cover"
+    priority
+  />
+</div>
+
+
     </div>
   );
 };

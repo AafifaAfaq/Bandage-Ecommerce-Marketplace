@@ -29,48 +29,57 @@ export default function ContactUs() {
       <NavBar2 />
 
       {/* About Us Section */}
-      <div className="absolute w-full h-auto  top-[90px] flex flex-col items-center  gap-[80px] py-[112px] bg-white">
-        <div className="flex flex-row items-center gap-[30px] w-[1044px] h-[500px]">
-          {/* Column 1 */}
-          <div className="flex flex-col items-start ml-20 gap-[35px] w-[599px] h-[321px] font-montserrat">
-            <h5 className="w-[149px] h-[24px] font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">Contact US</h5>
-            <h1 className="w-[542px] h-[80px] font-bold text-[58px] leading-[80px] tracking-[0.2px] text-[#252B42]">Get in touch <span className="block">
-            today! </span></h1>
-            <h4 className="w-[376px] h-[60px] font-normal text-[20px] leading-[30px] tracking-[0.2px] text-[#737373] py-10 font-montserrat">
-              We know how large objects will act, but things on a small scale
-            </h4>
-            <h4 className="w-[376px] h-[60px]  text-[20px] leading-[10px] tracking-[0.2px] text-[#252B42] font-bold">
-            Phone ; +451 215 215 
-            </h4>
-            <h4 className="w-[376px] h-[60px]  text-[#252B42] font-bold text-[20px] leading-[10px] tracking-[0.2px]">
-            Fax : +451 215 215
-            </h4>
-            <div className="flex space-x-6 mt-4 justify-center md:justify-start">
-              <a href="#" className="text-[#23A6F0] hover:text-blue-600">
-                <FaFacebook />
-              </a>
-              <a href="#" className="text-[#23A6F0] hover:text-blue-500">
-                <FaTwitter />
-              </a>
-              <a href="#" className="text-[#23A6F0] hover:text-pink-600">
-                <FaInstagram />
-              </a>
-            </div>
-
-           
-          </div>
-
-          {/* Column 2 */}
-          <Image src={bg2} alt="girl" height={700} className="absolute right-[20px]" />
-        </div>
+<div className="relative w-full py-[112px] bg-white">
+  <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-[80px]">
+    {/* Column 1 */}
+    <div className="flex flex-col items-start gap-6 w-full lg:w-[599px] font-montserrat text-center lg:text-left">
+      <h5 className="font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">
+        Contact Us
+      </h5>
+      <h1 className="font-bold text-[36px] lg:text-[58px] leading-tight lg:leading-[80px] tracking-[0.2px] text-[#252B42]">
+        Get in touch <span className="block">today!</span>
+      </h1>
+      <p className="font-normal text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] tracking-[0.2px] text-[#737373]">
+        We know how large objects will act, but things on a small scale.
+      </p>
+      <div className="space-y-2">
+        <p className="text-[#252B42] font-bold text-[16px] lg:text-[20px]">
+          Phone: +451 215 215
+        </p>
+        <p className="text-[#252B42] font-bold text-[16px] lg:text-[20px]">
+          Fax: +451 215 215
+        </p>
       </div>
+      {/* Social Media Icons */}
+      <div className="flex justify-center lg:justify-start space-x-6 mt-4">
+        <a href="#" className="text-[#23A6F0] hover:text-blue-600 text-xl">
+          <FaFacebook />
+        </a>
+        <a href="#" className="text-[#23A6F0] hover:text-blue-500 text-xl">
+          <FaTwitter />
+        </a>
+        <a href="#" className="text-[#23A6F0] hover:text-pink-600 text-xl">
+          <FaInstagram />
+        </a>
+      </div>
+    </div>
 
-     
+    {/* Column 2 */}
+    <div className="w-full lg:w-auto">
+      <Image
+        src={bg2}
+        alt="girl"
+        className="w-full max-w-[400px] md:max-w-[500px] lg:max-w-[700px] object-contain"
+      />
+    </div>
+  </div>
+</div>
+
       
 {/* Team Section */}
-<section className="relative bg-white top-[700px] h-[700px] flex flex-col justify-center items-center font-montserrat">
+<section className="relative bg-white top-0 h-[700px] flex flex-col justify-center items-center font-montserrat">
   <div className="w-full text-center">
-    <h5 className="font-bold text-[35px] leading-[50px] tracking-[0.2px] text-[#252B42] font-montserrat py-5">
+    <h5 className="font-bold text-[28px] md:text-[35px] leading-[50px] tracking-[0.2px] text-[#252B42] font-montserrat py-5">
     We help small businesses 
     <span className="block"
   >with big ideas</span>
@@ -111,15 +120,15 @@ export default function ContactUs() {
 
 
 {/* Let's Talk Section */}
-<section className="relative bg-white h-[400px] top-[800px] flex flex-col justify-center items-center">
+<section className="relative bg-white h-[500px] top-0 flex flex-col justify-center items-center">
   {/* Heading Section */}
   <div className="text-center">
     <Image src={arrow} alt="Arrow" width={50} height={50} className="mx-auto mb-2" />
     <h5 className="font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">
-      WE CAN&#39T WAIT TO MEET YOU
+      WE CAN'T WAIT TO MEET YOU
     </h5>
-    <h2 className="font-bold text-[50px] leading-[60px] tracking-[0.2px] text-[#252B42] font-montserrat py-5">
-      Let&#39s Talk
+    <h2 className="font-bold  text-[30px] md:text-[40px]  leading-[60px] tracking-[0.2px] text-[#252B42] font-montserrat py-5">
+      Let's Talk
     </h2>
   </div>
   {/* CTA Button */}
@@ -134,8 +143,8 @@ export default function ContactUs() {
 
 
  
-<section className="relative bg-white top-[800px] h-[450px]">
-  <div className="absolute bottom-0 w-full">
+<section className="relative ">
+  <div className=" w-full">
     <Footer />
   </div>
 </section>

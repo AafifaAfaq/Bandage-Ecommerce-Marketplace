@@ -82,13 +82,13 @@ export const NavBar = () => {
           <Link href="/about" className="text-gray-600 hover:text-black">
             About
           </Link>
-          <Link href="/blog" className="text-gray-600 hover:text-black">
+          <Link href="/" className="text-gray-600 hover:text-black">
             Blog
           </Link>
           <Link href="/contact" className="text-gray-600 hover:text-black">
             Contact
           </Link>
-          <Link href="/pages" className="text-gray-600 hover:text-black">
+          <Link href="/" className="text-gray-600 hover:text-black">
             Pages
           </Link>
         </nav>

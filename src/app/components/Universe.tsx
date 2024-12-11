@@ -24,7 +24,7 @@ export default function Universe() {
           <h2 className="lg:w-[375px] text-[24px] lg:text-[40px] font-Montserrat font-bold leading-[32px] lg:leading-[50px] text-[#252B42]">
             Part of the Neural Universe
           </h2>
-          <h4 className=" lg:w-[375px] text-[16px] lg:text-[20px] font-Montserrat font-normal leading-[24px] lg:leading-[30px] text-[#737373]">
+          <h4 className=" w-[275px] lg:w-[375px] text-[16px] lg:text-[20px] font-Montserrat font-normal leading-[24px] lg:leading-[30px] text-[#737373]">
             We know how large objects will act, but things on a small scale.
           </h4>
           <div className="flex flex-wrap justify-center lg:justify-start gap-[10px]">

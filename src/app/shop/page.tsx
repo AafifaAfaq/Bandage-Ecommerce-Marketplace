@@ -40,14 +40,14 @@ const Shop = () => {
   <div className="w-full h-[44px] flex flex-col sm:flex-row justify-between items-center py-[40px] sm:py-[24px]">
     {/* Shop Title */}
     <div className="w-full h-[32px] flex justify-center sm:justify-start items-center mb-[8px]">
-      <h2 className="font-Montserrat font-bold text-[24px] sm:text-[20px] md:text-[28px] leading-[32px] text-[#252B42] sm:hidden md:block lg:block">
+      <h2 className="font-Montserrat font-bold text-[24px] sm:text-[20px] md:text-[28px] leading-[32px] text-[#252B42] hidden md:block lg:block">
         Shop
       </h2>
     </div>
     {/* Breadcrumb */}
     <div className="w-full h-[44px] flex justify-center sm:justify-end items-center gap-[5px]">
       <div className="flex items-center gap-[15px]">
-        <div className="font-Montserrat font-bold text-[14px] leading-[24px] text-[#252B42]">
+        <div className="font-Montserrat font-bold text-[14px] leading-[24px] text-[#252B42] hidden md:block lg:block">
           Home
         </div>
         <h6 className="font-Montserrat font-bold text-[14px] leading-[24px] text-[#252B42] flex items-center">
