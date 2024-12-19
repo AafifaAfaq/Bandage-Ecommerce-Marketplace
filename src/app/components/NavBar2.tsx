@@ -34,10 +34,10 @@ export default function NavBar2() {
           <Link href="/" className="text-gray-600 hover:text-black">
             Home
           </Link>
-          <Link href="/" className="text-gray-600 hover:text-black">
+          <Link href="/product" className="text-gray-600 hover:text-black">
             Product
           </Link>
-          <Link href="/" className="text-gray-600 hover:text-black">
+          <Link href="/pricing" className="text-gray-600 hover:text-black">
             Pricing
           </Link>
           <Link href="/contact" className="text-gray-600 hover:text-black">
@@ -70,19 +70,7 @@ export default function NavBar2() {
         </div>
       </nav>
 
-     {/* Mobile Menu */}
-     <div className="lg:hidden w-full flex items-center justify-between p-4">
-        {/* Logo */}
-        <h3 className="font-Montserrat font-semibold leading-[32px] text-[24px]">Bandage</h3>
-
-        {/* Hamburger Icon */}
-        <div className="cursor-pointer" onClick={toggleMenu}>
-          <div className="w-[24px] h-[2px] bg-black mb-[5px]"></div>
-          <div className="w-[24px] h-[2px] bg-black mb-[5px]"></div>
-          <div className="w-[24px] h-[2px] bg-black"></div>
-        </div>
-      </div>
-
+     
       {/* Mobile Menu Content */}
       <div
         className={`${
@@ -91,8 +79,8 @@ export default function NavBar2() {
       >
         <ul className="font-Montserrat font-semibold text-[14px] text-white leading-[24px] gap-4 flex flex-col items-center">
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/">Product</Link></li>
-          <li><Link href="/">Pricing</Link></li>
+          <li><Link href="/product">Product</Link></li>
+          <li><Link href="/pricing">Pricing</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>
 

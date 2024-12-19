@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import {Montserrat} from'@next/font/google';
 import girl from "@/app/assets/background.png";
@@ -34,7 +35,7 @@ export default function AboutUs() {
       <NavBar2 />
 
      {/* About Us Section */}
-<div className="relative w-full h-auto py-8 bg-white">
+<div className="relative  h-auto py-8 bg-white">
   <div className="flex flex-col md:flex-row items-center gap-6 md:gap-[30px] px-4 md:px-16 lg:px-24">
     {/* Column 1 */}
     <div className="flex flex-col items-start gap-6 md:gap-[35px] w-full md:w-1/2 font-montserrat">
@@ -69,7 +70,7 @@ export default function AboutUs() {
 
 
     {/* Problem Section */}
-<div className="absolute w-full h-[400px] left-[50%]  transform -translate-x-[50%] bg-white flex flex-col items-center py-[15px] px-4 md:px-8">
+<div className="absolute  h-[400px] left-[50%]  transform -translate-x-[50%] bg-white flex flex-col items-center py-[15px] px-4 md:px-8">
   <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-[60px] ">
     {/* Left Column */}
     <div className="flex flex-col items-start gap-4 md:gap-[80px] w-full md:w-[394px]">
@@ -193,8 +194,8 @@ export default function AboutUs() {
 
 
  {/* Big companies Section */}
-<section className="relative bg-white top-0 h-[500px] py-20">
-  <div className="w-full text-center">
+<section className="relative bg-white h-[500px] top-0 py-20">
+  <div className="  w-full text-center">
     <h5 className="font-bold text-[24px] lg:text-[40px] leading-[50px] tracking-[0.2px] text-[#252B42] font-montserrat py-5">
       Big Companies Are Here
     </h5>
@@ -249,33 +250,33 @@ export default function AboutUs() {
 </section>
 
 {/* Work with Us Section */}
-<section className="relative h-[550px]">
-  <div className="absolute w-full h-[545px] justify-center top-0 flex flex-row items-center py-0">
-    {/* Left Column */}
-    <div className="flex flex-col items-center gap-[35px] w-full h-[600px] bg-[#2A7CC7] px-[40px] py-[30px]">
-      <div className="w-[500px]">
-        <h1 className="font-bold text-[16px] leading-[80px] tracking-[0.2px] text-white">WORK WITH US</h1>
-        <h5 className="font-semibold  leading-[50px] text-[24px] lg:text-[40px] tracking-[0.1px] text-white">Now Let’s grow Yours</h5>
-        <h4 className="font-normal w-[300px] lg:w-[375px] text-[14px] leading-[30px] tracking-[0.2px] text-white">
-          The gradual accumulation of information about atomic and small-scale behavior during the first quarter of the 20th
-        </h4>
-        {/* CTA Button */}
-        <div className="flex flex-row items-start gap-[10px] w-[195px] h-[52px] py-10">
-          <div className="flex flex-col  items-center px-[40px] py-[15px] gap-[10px] w-[195px] h-[52px] bg-[#23A6F0] rounded-[5px]">
-            <span className="font-bold text-[14px] leading-[22px] text-center tracking-[0.2px] text-[#FFFFFF]">
+<section className="w-full px-6 py-12 md:px-12 lg:px-36 bg-[#2A7CC7]">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="w-full md:w-1/2 p-6 md:p-12">
+            <p className="text-xl font-normal text-[#FFFFFF] mb-4">WORK WITH US</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#FFFFFF] mb-5">
+              Now Let’s grow Yours
+            </h1>
+            <p className="text-sm font-normal text-[#FFFFFF] mb-3">
+              The gradual accumulation of information about atomic and
+            </p>
+            <p className="text-sm font-normal text-[#FFFFFF] mb-5">
+              small-scale behavior during the first quarter of the 20th
+            </p>
+            <button className="text-sm font-bold text-[#FFFFFF] md:w-[184px] h-[52px] bg-[#23A6F0] rounded-md px-4 py-2 hover:bg-[#185274]">
               Button
-            </span>
+            </button>
+          </div>
+
+          <div className="w-full md:w-1/2 mt-8 md:mt-0 ">
+            <Image
+              src={pinkgirl}
+              alt="Image"
+              className="w-full h-auto object-contain"
+            />
           </div>
         </div>
-      </div>
-    </div>
-
-    {/* Right Column (Image without background) */}
-    <div className="flex justify-center items-center w-[600px] h-[600px]">
-      <Image src={pinkgirl} alt="girl" className="w-full h-full object-cover sm:hidden md:block lg:block" />
-    </div>
-  </div>
-</section>
+      </section>
 
 
 {/* Footer Section */}

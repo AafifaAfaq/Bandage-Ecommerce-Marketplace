@@ -3,8 +3,6 @@ import { NavBar } from '.././components/NavBar'
 
 export const shop = () => {
   return (
-    <div>
-        <NavBar />
-    </div>
+    <div></div>
   )
 }

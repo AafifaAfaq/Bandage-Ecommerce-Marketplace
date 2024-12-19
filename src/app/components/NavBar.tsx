@@ -82,7 +82,7 @@ export const NavBar = () => {
           <Link href="/about" className="text-gray-600 hover:text-black">
             About
           </Link>
-          <Link href="/" className="text-gray-600 hover:text-black">
+          <Link href="/product" className="text-gray-600 hover:text-black">
             Blog
           </Link>
           <Link href="/contact" className="text-gray-600 hover:text-black">
@@ -147,9 +147,9 @@ export const NavBar = () => {
           <li><Link href="/">Home</Link></li>
           <li><Link href="/shop">Shop</Link></li>
           <li><Link href="/about">About</Link></li>
-          <li><Link href="/blog">Blog</Link></li>
+          <li><Link href="/product">Blog</Link></li>
           <li><Link href="/contact">Contact</Link></li>
-          <li><Link href="/pages">Pages</Link></li>
+          <li><Link href="/">Pages</Link></li>
         </ul>
 
         {/* Close button */}
