@@ -26,6 +26,7 @@ import product10 from "@/app/assets/product10.jpg";
 import product11 from "@/app/assets/product11.jpg";
 import product12 from "@/app/assets/product12.jpg";
 import Vector2 from "@/app/assets/Vector2.png";
+import CardText from "../components/cards-text";
 import drop from "@/app/assets/Vector13.png";
 import frame from "@/app/assets/Frame 31.png";
 import Footer from "../components/Footer";
@@ -159,10 +160,8 @@ const Shop = () => {
                 alt={`Product ${index + 1}`} 
                 className="w-full h-auto"
               />
-              <div className="relative bottom-4 left-4">
-                <Image src={Vector2} alt="Price" className="justify-self-center" />
-              </div>
             </div>
+            <CardText />
           </div>
         )
       )}
