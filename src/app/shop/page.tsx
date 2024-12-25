@@ -149,16 +149,16 @@ const Shop = () => {
 <div className="grid place-items-center min-h-screen bg-[#FAFAFA] px-4 sm:px-6 lg:px-8">
   <div className="w-full max-w-[1124px] py-[48px] gap-[48px]">
     {/* Grid Layout */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
       {[product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12].map(
         (pic, index) => (
           <div key={index} className="flex flex-col items-center mx-auto mb-6">
             {/* Image Container */}
             <div className="relative w-full ">
-              <Image 
-                src={pic} 
-                alt={`Product ${index + 1}`} 
-                className="w-full h-auto"
+              <Image
+                src={pic}
+                alt={`Product ${index + 1}`}
+                className=" h-[400px] object-cover" // Set individual width and height
               />
             </div>
             <CardText />
@@ -168,6 +168,7 @@ const Shop = () => {
     </div>
   </div>
 </div>
+
 
 
 

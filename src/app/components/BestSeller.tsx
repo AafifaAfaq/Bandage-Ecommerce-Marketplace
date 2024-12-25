@@ -54,7 +54,7 @@ export const BestSeller = () => {
       <Image
         src={product.src}
         alt={product.alt}
-        width={250}
+        width={450}
         height={700}
         className="w-full h-full object-cover"
       />
