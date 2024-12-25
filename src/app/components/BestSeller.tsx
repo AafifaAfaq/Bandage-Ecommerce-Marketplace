@@ -35,7 +35,7 @@ export const BestSeller = () => {
         </div>
 
         {/* Product Rows */}
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 w-9/12 items-center justify-self-center gap-6 mb-20">
+<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-9/12 items-center justify-self-center gap-6 mb-20">
   {/* Product Cards */}
   {[
     { src: product1, alt: "Men" },
@@ -54,12 +54,12 @@ export const BestSeller = () => {
       <Image
         src={product.src}
         alt={product.alt}
-        width={450}
-        height={700}
+        width={600}
+        height={600}
         className="w-full h-full object-cover"
       />
       {/* CardText Positioned at the Center */}
-      <div className="relative ">
+      <div className="flex justify-center ">
         <CardText />
       </div>
     </div>
