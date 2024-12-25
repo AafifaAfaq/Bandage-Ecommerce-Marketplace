@@ -35,96 +35,37 @@ export const BestSeller = () => {
         </div>
 
         {/* Product Rows */}
-        <div className="grid grid-cols-1 md:grid-cols-2  w-9/12 items-center justify-self-center lg:grid-cols-4 gap-4 mb-20">
-          {/* Product Cards */}
-          <div className="relative group">
-            <Image
-              src={product1}
-              alt="Men"
-              width={510}
-              height={700}
-              className="w-full h-full object-cover rounded-md"
-            />
-            <CardText />
-          </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 w-9/12 items-center justify-self-center gap-6 mb-20">
+  {/* Product Cards */}
+  {[
+    { src: product1, alt: "Men" },
+    { src: product2, alt: "Women" },
+    { src: product3, alt: "Accessories" },
+    { src: product4, alt: "Kids" },
+    { src: product5, alt: "Men" },
+    { src: product6, alt: "Women" },
+    { src: product7, alt: "Accessories" },
+    { src: product8, alt: "Kids" },
+  ].map((product, index) => (
+    <div
+      key={index}
+      className="relative group overflow-hidden rounded-md"
+    >
+      <Image
+        src={product.src}
+        alt={product.alt}
+        width={250}
+        height={700}
+        className="w-full h-full object-cover"
+      />
+      {/* CardText Positioned at the Center */}
+      <div className="relative ">
+        <CardText />
+      </div>
+    </div>
+  ))}
+</div>
 
-          <div className="relative group">
-            <Image
-              src={product2}
-              alt="Women"
-              width={510}
-              height={700}
-              className="w-full h-full object-cover rounded-md"
-            />
-            <CardText />
-          </div>
-
-          <div className="relative group">
-            <Image
-              src={product3}
-              alt="Accessories"
-              width={510}
-              height={700}
-              className="w-full h-full object-cover rounded-md"
-            />
-            <CardText />
-          </div>
-
-          <div className="relative group">
-            <Image
-              src={product4}
-              alt="Kids"
-              width={510}
-              height={700}
-              className="w-full h-full object-cover rounded-md"
-            />
-            <CardText />
-          </div>
-
-          <div className="relative group">
-            <Image
-              src={product5}
-              alt="Men"
-              width={510}
-              height={700}
-              className="w-full h-full object-cover rounded-md"
-            />
-            <CardText />
-          </div>
-
-          <div className="relative group">
-            <Image
-              src={product6}
-              alt="Women"
-              width={510}
-              height={700}
-              className="w-full h-full object-cover rounded-md"
-            />
-            <CardText />
-          </div>
-
-          <div className="relative group">
-            <Image
-              src={product7}
-              alt="Accessories"
-              width={510}
-              height={700}
-              className="w-full h-full object-cover rounded-md"
-            />
-            <CardText />
-          </div>
-
-          <div className="relative group">
-            <Image
-              src={product8}
-              alt="Kids"
-              width={510}
-              height={700}
-              className="w-full h-full object-cover rounded-md"
-            />
-            <CardText />
-          </div>
-        </div>
       </div>
     </div>
   );
