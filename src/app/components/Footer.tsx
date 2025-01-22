@@ -39,10 +39,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-800">Company Info</h3>
             <ul className="mt-4 space-y-2">
-              <li><a href="#" className="hover:text-blue-500">About Us</a></li>
-              <li><a href="#" className="hover:text-blue-500">Carrier</a></li>
-              <li><a href="#" className="hover:text-blue-500">We are hiring</a></li>
-              <li><a href="#" className="hover:text-blue-500">Blog</a></li>
+              <li><a href="/about" className="hover:text-blue-500">About Us</a></li>
+              <li><a href="/product" className="hover:text-blue-500">Product</a></li>
+              <li><a href="/contact" className="hover:text-blue-500">Contact</a></li>
+              <li><a href="/blog" className="hover:text-blue-500">Blog</a></li>
             </ul>
           </div>
 
@@ -94,7 +94,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="mt-10 border-t pt-4 text-center text-sm text-gray-500">
-          Made With Love By Finland | All Rights Reserved
+          Made With Love By Aafifa Afaq | All Rights Reserved
         </div>
       </div>
     </footer>

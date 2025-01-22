@@ -1,5 +1,4 @@
 import Image from "next/image";
-import NavBar2 from "../components/NavBar2";
 import { GreenHeader } from "../components/GreenHeader";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import cat1 from "@/app/assets/category1.jpg";
@@ -25,11 +24,12 @@ import product9 from "@/app/assets/product9.jpg";
 import product10 from "@/app/assets/product10.jpg";
 import product11 from "@/app/assets/product11.jpg";
 import product12 from "@/app/assets/product12.jpg";
-import Vector2 from "@/app/assets/Vector2.png";
 import CardText from "../components/cards-text";
 import drop from "@/app/assets/Vector13.png";
 import frame from "@/app/assets/Frame 31.png";
 import Footer from "../components/Footer";
+import ProductByTag from "../components/ProductByTag";
+import { BestSellerShop } from "../components/BestSellershop";
 
 const Shop = () => {
   return (
@@ -115,6 +115,9 @@ const Shop = () => {
   </div>
 </div>
 
+{/* Products Section */}
+<ProductByTag />
+
 
 {/* Clients Section */}
 <section className="relative bg-white py-10">
@@ -146,28 +149,7 @@ const Shop = () => {
       <Footer />
 
       {/* Product Section */}
-<div className="grid place-items-center min-h-screen bg-[#FAFAFA] px-4 sm:px-6 lg:px-8">
-  <div className="w-full max-w-[1124px] py-[48px] gap-[48px]">
-    {/* Grid Layout */}
-    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
-      {[product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12].map(
-        (pic, index) => (
-          <div key={index} className="flex flex-col items-center mx-auto mb-6">
-            {/* Image Container */}
-            <div className="relative w-full ">
-              <Image
-                src={pic}
-                alt={`Product ${index + 1}`}
-                className=" h-[400px] object-cover" // Set individual width and height
-              />
-            </div>
-            <CardText />
-          </div>
-        )
-      )}
-    </div>
-  </div>
-</div>
+<BestSellerShop />
 
 
 

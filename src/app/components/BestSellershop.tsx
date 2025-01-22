@@ -11,6 +11,10 @@ import product5 from "@/app/assets/product5.png";
 import product6 from "@/app/assets/product6.png";
 import product7 from "@/app/assets/product7.png";
 import product8 from "@/app/assets/product8.png";
+import product9 from "@/app/assets/product9.jpg";
+import product10 from "@/app/assets/product10.jpg";
+import product11 from "@/app/assets/product11.jpg";
+import product12 from "@/app/assets/product12.jpg";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -26,9 +30,13 @@ const products = [
   { id: 6, src: product6, alt: "Women", title: "Yellow Top", description: "Elegant and chic top." },
   { id: 7, src: product7, alt: "Accessories", title: "Cool Jacket", description: "Enhance your look with cool jacket." },
   { id: 8, src: product8, alt: "Kids", title: "Black and White Printed Shirt", description: "Bright and vibrant outfits for kids." },
+  { id: 9, src: product9, alt: "Men", title: "Waterproof Jacket", description: "Stylish and waterproof jacket." },
+  { id: 10, src: product10, alt: "Men", title: "Hoodie", description: "Decorate your look with a hoodie." },
+  { id: 11, src: product11, alt: "Men", title: "Summer-Wear T-Shirt", description: "Comfortable and elegant t-shirt." },
+  { id: 12, src: product12, alt: "Women", title: "Brown Jacket", description: "Dash your style with a brown jacket." },
 ];
 
-export const BestSeller = () => {
+export const BestSellerShop = () => {
   return (
     <div className="w-full bg-[#FAFAFA] py-12 px-6">
       {/* BESTSELLER PRODUCTS */}
@@ -47,7 +55,7 @@ export const BestSeller = () => {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <Link key={product.id} href={`/bestseller/${product.id}`} passHref>
+          <Link key={product.id} href={`/sellershop/${product.id}`} passHref>
             <div className="relative group overflow-hidden rounded-lg cursor-pointer border border-gray-200 shadow-sm hover:shadow-md">
               {/* Product Image */}
               <Image

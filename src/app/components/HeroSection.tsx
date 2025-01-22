@@ -2,6 +2,7 @@ import React from 'react';
 import {Montserrat} from'@next/font/google';
 import Image from 'next/image';
 import img1 from '@/app/assets/img1.png';
+import Link from 'next/link';
 
 const montserrat = Montserrat({
     subsets: ['latin'],
@@ -18,12 +19,14 @@ const HeroSection = () => {
         <h1 className="text-2xl md:text-4xl sm:text-sm lg:6xl font-bold leading-tight">
           New Collection
         </h1>
-        <p className="text-sm md:text-lg font-light">
+        <p className="text-sm md:text-lg font-light py-2">
           We know how large objects will act, but things on a small scale.
         </p>
+        <Link href="/shop" >
         <button className="bg-green-500 text-white py-2 px-6 rounded-md font-semibold hover:bg-green-600">
           Shop Now
         </button>
+        </Link>
       </div>
 
       {/* Centered Image */}

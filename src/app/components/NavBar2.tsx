@@ -34,7 +34,7 @@ export default function NavBar2() {
           <Link href="/" className="text-gray-600 hover:text-black">
             Home
           </Link>
-          <Link href="/pages" className="text-gray-600 hover:text-black">
+          <Link href="/Products" className="text-gray-600 hover:text-black">
             Product
           </Link>
           <Link href="/pricing" className="text-gray-600 hover:text-black">
@@ -79,7 +79,7 @@ export default function NavBar2() {
       >
         <ul className="font-Montserrat font-semibold text-[14px] text-white leading-[24px] gap-4 flex flex-col items-center">
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/pages">Product</Link></li>
+          <li><Link href="/Products">Product</Link></li>
           <li><Link href="/pricing">Pricing</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>

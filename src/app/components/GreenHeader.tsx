@@ -95,7 +95,12 @@ export const GreenHeader = () => {
               Login / Register
             </Link>
             <CiSearch className="text-[#23A6F0] text-xl" />
-            <GrCart className="text-[#23A6F0] text-xl" />
+             {/* Cart Icon */}
+             <Link href="/cart">
+                <div className="flex items-center space-x-1 cursor-pointer">
+                  <GrCart className="text-[#23A6F0] text-xl" />
+                </div>
+              </Link>
             <CiHeart className="text-[#23A6F0] text-xl" />
           </div>
 
