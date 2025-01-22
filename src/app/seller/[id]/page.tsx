@@ -10,7 +10,6 @@ import { FiShoppingCart } from "react-icons/fi";
 import { FaEye } from "react-icons/fa6";
 import { NavBar } from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
-import { useCart } from "@/app/ContextApi/CartProvider";
 
 const products = [
   { 
@@ -79,12 +78,11 @@ const products = [
   },
 
 ];
+
 interface Params{
   id: string;
 }
-
 export default function ProductDetail({ params }: { params: Params }) {
-  const { addToCart } = useCart();
   const product = products.find((p) => p.id === parseInt(params.id));
   if (!product) return <p>Product not found</p>;
 
@@ -171,13 +169,7 @@ export default function ProductDetail({ params }: { params: Params }) {
                 <FaEye />
               </div>
             </div>
-            {/* Add to Cart Button */}
-            <button
-              onClick={() => addToCart(product)}
-              className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 w-full sm:w-auto mt-6"
-            >
-              Add to Cart
-            </button>
+            
           </div>
         </div>
       </article>
