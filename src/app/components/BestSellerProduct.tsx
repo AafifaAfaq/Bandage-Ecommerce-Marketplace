@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import Image from "next/image";
 import pic2 from "@/app/assets/product-cover-5 (21).png";
@@ -23,7 +22,6 @@ const products = [
   { id: 6, image: pic3, title: "Product 6", description: "Description for product 6" },
   { id: 7, image: pic6, title: "Product 7", description: "Description for product 1" },
   { id: 8, image: pic2, title: "Product 8", description: "Description for product 2" },
-  ,
 ];
 
 export default function Bestseller() {
@@ -43,20 +41,21 @@ export default function Bestseller() {
           {/* Products Section */}
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[15px] sm:gap-[20px] lg:gap-[30px]">
             {products.map((product) => (
-              <Link key={product.id} href={`/seller/${product.id}`}>
-                <div className="w-full h-auto flex flex-col bg-[#FFFFFF] shadow-lg rounded-md overflow-hidden cursor-pointer">
-                  <div className="flex-grow">
-                    <Image
-                      src={product.image}
-                      alt={product.title}
-                      className="w-full h-full object-cover max-h-[200px] sm:max-h-[250px] lg:max-h-[300px]"
-                    />
-                    <CardT2 />
+              product ? (
+                <Link key={product.id} href={`/seller/${product.id}`}>
+                  <div className="w-full h-auto flex flex-col bg-[#FFFFFF] shadow-lg rounded-md overflow-hidden cursor-pointer">
+                    <div className="flex-grow">
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        className="w-full h-full object-cover max-h-[200px] sm:max-h-[250px] lg:max-h-[300px]"
+                      />
+                      <CardT2 />
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              ) : null
             ))}
-
           </div>
         </div>
       </div>
