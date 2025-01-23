@@ -84,7 +84,7 @@ const CartPage = () => {
                         </td>
                         <td className="py-4 px-6 border-b text-left">
                           <button
-                            onClick={() => removeFromCart (Number(item.cartid))}
+                            onClick={() => removeFromCart(item.cartid)}
                             className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition-shadow shadow-md"
                           >
                             Remove
@@ -119,9 +119,15 @@ const CartPage = () => {
                 >
                   Continue Shopping
                 </Link>
+
+                <Link
+                  href="/checkout">
                 <button className="bg-gray-800 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition duration-200 shadow-lg">
                   Proceed to Checkout
                 </button>
+                </Link>
+
+                
               </div>
             </div>
           )}

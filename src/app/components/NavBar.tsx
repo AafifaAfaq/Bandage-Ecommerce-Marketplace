@@ -104,12 +104,12 @@ export const NavBar = () => {
           {/* Right Section */}
           <div className="flex items-center space-x-6 text-sm font-semibold">
             {/* Login/Register */}
-            <a
-              href="#"
+            <Link
+              href="/login"
               className="text-[#23A6F0] hover:underline flex items-center"
             >
               Login / Register
-            </a>
+            </Link>
 
             {/* Icons */}
             <div className="flex items-center space-x-4">
