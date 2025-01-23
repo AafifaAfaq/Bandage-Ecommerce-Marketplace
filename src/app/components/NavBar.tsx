@@ -75,7 +75,7 @@ export const NavBar = () => {
 
           {/* Navigation */}
           <nav className="flex items-center space-x-8 text-sm font-Montserrat font-semibold">
-            <Link href="#" className="text-gray-600 hover:text-black">
+            <Link href="/" className="text-gray-600 hover:text-black">
               Home
             </Link>
 
@@ -172,6 +172,9 @@ export const NavBar = () => {
           </li>
           <li>
             <Link href="/pages">Pages</Link>
+          </li>
+          <li>
+            <Link href="/Products">Products</Link>
           </li>
         </ul>
 

@@ -91,7 +91,7 @@ export const GreenHeader = () => {
 
           {/* Right Section */}
           <div className="hidden md:flex items-center gap-4">
-            <Link href="#" className="text-[#23A6F0] hover:underline">
+            <Link href="/login" className="text-[#23A6F0] hover:underline">
               Login / Register
             </Link>
             <CiSearch className="text-[#23A6F0] text-xl" />
