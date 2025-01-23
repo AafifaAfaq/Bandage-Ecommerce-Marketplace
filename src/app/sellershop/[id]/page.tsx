@@ -24,7 +24,7 @@ import Bestseller from "@/app/components/BestSellerProduct";
 
 const products = [
   {
-    id: 1,
+    id: 2,
     src: product2,
     title: "Men's White T-Shirt",
     description: "Stylish and trendy clothing for men.",
@@ -32,7 +32,7 @@ const products = [
     tags: ["Trendy", "Comfortable", "Stylish"],
   },
   {
-    id: 2,
+    id: 1,
     src: product1,
     title: "Women's Classic Top",
     description: "Elegant and chic clothing for women.",
