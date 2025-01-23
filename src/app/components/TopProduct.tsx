@@ -9,7 +9,7 @@ import { useCart } from "../ContextApi/CartProvider";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 interface Product {
-  _id: string;
+  _id: number;
   title: string;
   price: number;
   description: string;
