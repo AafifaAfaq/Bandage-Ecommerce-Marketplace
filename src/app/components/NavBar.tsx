@@ -98,7 +98,6 @@ export const NavBar = () => {
             <Link href="/Products" className="text-gray-600 hover:text-black">
               Products
             </Link>
-            
           </nav>
 
           {/* Right Section */}
@@ -139,6 +138,21 @@ export const NavBar = () => {
         <h3 className="font-Montserrat font-semibold leading-[32px] text-[24px]">
           Bandage
         </h3>
+
+        {/* Login/Register */}
+        <Link
+          href="/login"
+          className="text-[#23A6F0] text-sm  hover:underline flex items-center"
+        >
+          Login / Register
+        </Link>
+
+        {/* Cart Icon */}
+        <Link href="/cart">
+          <div className="flex items-center space-x-1 cursor-pointer">
+            <GrCart className="text-[#23A6F0] text-xl" />
+          </div>
+        </Link>
 
         {/* Hamburger Icon */}
         <div className="cursor-pointer" onClick={toggleMenu}>

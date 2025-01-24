@@ -35,7 +35,7 @@ const CartPage = () => {
           ) : (
             <div className="space-y-10">
               {/* Desktop Table */}
-              <div className="hidden md:block shadow-lg rounded-xl overflow-hidden border border-gray-300">
+              <div className="hidden md:block mx-auto shadow-lg rounded-xl overflow-hidden border border-gray-300">
                 <table className="min-w-full bg-white">
                   <thead>
                     <tr className="bg-indigo-200 text-gray-900 text-center">
@@ -56,7 +56,7 @@ const CartPage = () => {
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="text-center">
+                  <tbody className=" w-screen text-center">
                     {cart.map((item) => (
                       <tr
                         key={item.cartid}
@@ -96,6 +96,45 @@ const CartPage = () => {
                 </table>
               </div>
 
+              {/* Mobile Cards */}
+              <div className="block md:hidden space-y-4">
+                {cart.map((item) => (
+                  <div
+                    key={item.cartid}
+                    className="flex flex-col bg-white rounded-lg shadow-md overflow-hidden border border-gray-300"
+                  >
+                    <div className="flex items-center space-x-4 p-4">
+                      <div className="w-20 h-20">
+                        <Image
+                          src={item.imageUrl}
+                          alt={item.name}
+                          width={80}
+                          height={80}
+                          className="rounded-md object-cover"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-gray-800">
+                          {item.name}
+                        </h3>
+                        <p className="text-green-600 font-bold">
+                          ${item.price}
+                        </p>
+                        <p className="text-gray-600">Quantity: {item.quantity}</p>
+                      </div>
+                    </div>
+                    <div className="flex justify-end p-4">
+                      <button
+                        onClick={() => removeFromCart(item.cartid)}
+                        className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition-shadow shadow-md"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
               {/* Total Price Section */}
               <div className="p-8 bg-white shadow-lg rounded-xl border border-gray-200 text-center">
                 <h2 className="text-3xl font-extrabold text-gray-800 mb-6 tracking-tight">
@@ -120,14 +159,11 @@ const CartPage = () => {
                   Continue Shopping
                 </Link>
 
-                <Link
-                  href="/checkout">
-                <button className="bg-gray-800 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition duration-200 shadow-lg">
-                  Proceed to Checkout
-                </button>
+                <Link href="/checkout">
+                  <button className="bg-gray-800 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition duration-200 shadow-lg">
+                    Proceed to Checkout
+                  </button>
                 </Link>
-
-                
               </div>
             </div>
           )}

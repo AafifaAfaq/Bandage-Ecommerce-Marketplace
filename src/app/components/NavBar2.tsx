@@ -70,7 +70,6 @@ export default function NavBar2() {
         </div>
       </nav>
 
-     
       {/* Mobile Menu Content */}
       <div
         className={`${
@@ -78,10 +77,18 @@ export default function NavBar2() {
         } absolute top-0 left-0 w-full bg-[#252B42] p-4 flex flex-col items-center gap-4 z-50`}
       >
         <ul className="font-Montserrat font-semibold text-[14px] text-white leading-[24px] gap-4 flex flex-col items-center">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/Products">Product</Link></li>
-          <li><Link href="/pricing">Pricing</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/Products">Product</Link>
+          </li>
+          <li>
+            <Link href="/pricing">Pricing</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
         </ul>
 
         {/* Close button */}

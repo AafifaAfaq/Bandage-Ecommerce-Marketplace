@@ -3,7 +3,12 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Vector from "@/app/assets/Vector.png";
-import { FaFacebook, FaRegEnvelope, FaTwitter, FaYoutube } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaRegEnvelope,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 import { Montserrat } from "@next/font/google";
 import { FaInstagram } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -95,14 +100,25 @@ export const GreenHeader = () => {
               Login / Register
             </Link>
             <CiSearch className="text-[#23A6F0] text-xl" />
-             {/* Cart Icon */}
-             <Link href="/cart">
-                <div className="flex items-center space-x-1 cursor-pointer">
-                  <GrCart className="text-[#23A6F0] text-xl" />
-                </div>
-              </Link>
+            {/* Cart Icon */}
+            <Link href="/cart">
+              <div className="flex items-center space-x-1 cursor-pointer">
+                <GrCart className="text-[#23A6F0] text-xl" />
+              </div>
+            </Link>
             <CiHeart className="text-[#23A6F0] text-xl" />
           </div>
+
+          {/*Log in for Mobile */}
+          <Link href="/login" className="text-[#23A6F0] hover:underline">
+            Login / Register
+          </Link>
+          {/* Cart Icon for mobile  */}
+          <Link href="/cart">
+            <div className="flex items-center space-x-1 cursor-pointer">
+              <GrCart className="text-[#23A6F0] text-xl" />
+            </div>
+          </Link>
 
           {/* Hamburger Menu for Small Screens */}
           <button
