@@ -1,49 +1,47 @@
-"use client"
+"use client";
 import { useState } from "react";
+import { useSignIn, useSession, useClerk } from "@clerk/nextjs";
+import { SignIn } from "@clerk/nextjs";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { isSignedIn } = useSession();  // Use the `useSession` hook to check if the user is signed in
+  const { signOut } = useClerk(); // Get the `signOut` function from the `useClerk` hook
 
-  const handleSubmit = (e:any) => {
-    e.preventDefault();
-    // Handle the login logic here
-    console.log("Email:", email);
-    console.log("Password:", password);
-  };
+  if (isSignedIn) {
+    // Redirect to another page if the user is already signed in
+    window.location.href = "#";  // Redirect to home or dashboard
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
         <h2 className="text-2xl font-bold text-center text-gray-700 mb-6">Login</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-600">Email</label>
-            <input
-              type="email"
-              id="email"
-              className="mt-2 p-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+
+        {isSignedIn ? (
+          // If the user is signed in, show the log out button or go back to home button
+          <div className="flex flex-col items-center">
+            <h3 className="text-lg font-semibold text-gray-700 mb-4">You are already logged in!</h3>
+
+            {/* Log out button */}
+            <button
+              onClick={() => signOut()} // Sign out the user when button is clicked
+              className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 mb-4"
+            >
+              Log Out
+            </button>
+
+            {/* Go back to home button */}
+            <button
+              onClick={() => window.location.href = '/'} // Go back to the home page
+              className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
+            >
+              Go back to Home
+            </button>
           </div>
-          <div className="mb-6">
-            <label htmlFor="password" className="block text-sm font-medium text-gray-600">Password</label>
-            <input
-              type="password"
-              id="password"
-              className="mt-2 p-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          
-          <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
-            Login
-          </button>
-        </form>
+        ) : (
+          // Use Clerk's SignIn form if the user is not signed in
+          <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
+        )}
       </div>
     </div>
   );

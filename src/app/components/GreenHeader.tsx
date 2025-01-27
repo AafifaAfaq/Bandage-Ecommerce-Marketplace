@@ -110,12 +110,12 @@ export const GreenHeader = () => {
           </div>
 
           {/*Log in for Mobile */}
-          <Link href="/login" className="text-[#23A6F0] hover:underline">
+          <Link href="/login" className="text-[#23A6F0] hover:underline md:hidden">
             Login / Register
           </Link>
           {/* Cart Icon for mobile  */}
           <Link href="/cart">
-            <div className="flex items-center space-x-1 cursor-pointer">
+            <div className="flex items-center space-x-1 cursor-pointer md:hidden">
               <GrCart className="text-[#23A6F0] text-xl" />
             </div>
           </Link>
