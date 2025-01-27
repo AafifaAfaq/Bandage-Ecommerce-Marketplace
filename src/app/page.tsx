@@ -9,15 +9,12 @@ import Universe from "./components/Universe";
 import FeaturedPosts from "./components/FeaturedPosts";
 import Footer from "./components/Footer";
 import TopFourProducts from "./components/TopProduct";
-import { ClerkProvider } from '@clerk/nextjs';
 
 export default function Home() {
 
   return (
     <>
-      <ClerkProvider>
-        <NavBar />
-      </ClerkProvider>
+    <NavBar />
       <HeroSection />
       <EditorSection />
       <TopFourProducts />
